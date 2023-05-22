@@ -45,9 +45,7 @@ public class Radio {
             currentStation--;
         } else {
             currentStation = 9;
-
         }
-
     }
 
     public void increaseVolume() {
