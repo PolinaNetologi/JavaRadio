@@ -38,17 +38,31 @@ public class Radio {
         } else {
             currentStation = 0;
         }
-
-        public void prev() {
-            if (currentStation != 9) {
-                currentStation++;
-            } else {
-                currentStation = 0;
-
-
-            }
-        }
     }
+
+    public void prev() {
+        if (currentStation != 0) {
+            currentStation--;
+        } else {
+            currentStation = 9;
+
+        }
+
+    }
+
+    public void increaseVolume() {
+        currentVolume = currentVolume <= 0 ? 100 : ++currentVolume;
+        setCurrentVolume(currentVolume);
+    }
+
+    public void decreaseVolume() {
+        currentVolume = currentVolume <= 0 ? 100 : --currentVolume;
+        setCurrentVolume(currentVolume);
+    }
+}
+
+
+
 
 
 
